@@ -1,10 +1,12 @@
 
-/* Top Nav */
+/* Top Nav - Modern Perfume Store Design */
 .top-navbar {
-  @apply flex py-2 min-h-[48px];
+  @apply flex py-3 min-h-[52px];
+  background: #faf8f5;
+  border-bottom: 1px solid #e8e3db;
 
   @screen lg {
-    @apply py-1.5;
+    @apply py-2;
   }
 
   .topnav-has-bg & {
@@ -20,7 +22,20 @@
   }
 
   .s-search-input{
-    @apply bg-gray-200/50 hover:bg-gray-200/70 border-none;
+    background: #ffffff;
+    border: 1px solid #e8e3db;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: #c9b8a8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    &:focus {
+      border-color: #8b7355;
+      box-shadow: 0 2px 12px rgba(139,115,85,0.15);
+    }
   }
 
   @media (max-width: 640px) {
@@ -30,7 +45,9 @@
   } 
 
   .topnav-is-dark & {
-    @apply bg-dark text-gray-300;
+    background: #2d2d2d;
+    border-bottom-color: #3d3d3d;
+    @apply text-gray-300;
 
     .btn--circle-gray,
     .btn--rounded-gray,
@@ -54,25 +71,41 @@
 
 // contacs menu items - pages menu items
 .topnav-link-item{
-  @apply inline-block transition duration-300 px-4 rtl:last:pl-0 ltr:last:pr-0 py-px text-sm leading-none ltr:border-r rtl:border-l border-gray-200 ltr:last:border-0 rtl:last:border-0 hover:opacity-80;
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  color: #8b7355;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  
+  &:hover {
+    color: #2d2d2d;
+    opacity: 1;
+  }
 
   &.right-side{
     @apply rtl:first:pr-0 ltr:first:pl-0
   }
 }
 
-/* Main Nav */
+/* Main Nav - Modern Minimalist Design */
 .main-nav-container {
-  @apply min-h-[68px] lg:min-h-[84px];
+  min-height: 80px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  position: relative;
+  z-index: 30;
   
-  /* TEST: Golden gradient for perfume store */
-  background: #d4af37 !important;
-  background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 100%) !important;
+  @screen lg {
+    min-height: 90px;
+  }
   
   // Custom background Color
   .has-bg &,
   .has-bg & .sub-menu{
-    background: #d4af37 !important;
+    @apply bg-[color:var(--mainnav-bg)];
   }
 
   // Custom text color
@@ -80,9 +113,34 @@
     @apply text-[color:var(--mainnav-text-color)];
   }
   
-  /* Make sure text is visible on golden background */
-  * {
-    color: #2c2c2c !important;
+  /* Modern navigation links */
+  .main-menu > li > a {
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #8b7355;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    &:hover {
+      color: #8b7355;
+      
+      &:after {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -152,19 +210,52 @@
 }
 
 .navbar-brand {
-  @apply items-center flex my-2 lg:my-0;
+  @apply items-center flex my-3 lg:my-0;
 
   img {
-    @apply w-auto max-h-12 max-w-[100px] xs:max-w-[170px];
+    max-width: 180px;
+    max-height: 55px;
+    width: auto;
+    filter: brightness(0.95);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      filter: brightness(1);
+      transform: scale(1.02);
+    }
   }
 }
 
-// Mainnav cart icon
+// Mainnav cart icon - Modern Style
 .header-btn{
-  @apply border-none outline-none transition-opacity hover:opacity-80;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
 
   &__icon{
-    @apply text-xl w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-700;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1.5px solid #e8e3db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d2d2d;
+    font-size: 1.25rem;
+    background: #faf8f5;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: #8b7355;
+      color: #ffffff;
+      border-color: #8b7355;
+      box-shadow: 0 4px 12px rgba(139,115,85,0.25);
+    }
+    
     &.icon{
       @apply mr-[9px] rtl:ml-[9px] rtl:mr-[unset];
     }
