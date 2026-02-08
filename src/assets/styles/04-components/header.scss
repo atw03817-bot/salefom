@@ -65,15 +65,24 @@
 .main-nav-container {
   @apply min-h-[68px] lg:min-h-[84px];
   
+  /* TEST: Golden gradient for perfume store */
+  background: #d4af37 !important;
+  background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 100%) !important;
+  
   // Custom background Color
   .has-bg &,
   .has-bg & .sub-menu{
-    @apply bg-[color:var(--mainnav-bg)];
+    background: #d4af37 !important;
   }
 
   // Custom text color
   .has-text-color & {
     @apply text-[color:var(--mainnav-text-color)];
+  }
+  
+  /* Make sure text is visible on golden background */
+  * {
+    color: #2c2c2c !important;
   }
 }
 

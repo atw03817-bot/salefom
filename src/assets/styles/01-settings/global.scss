@@ -22,7 +22,8 @@ $main-text-color: var(--main-text-color);
   /* font-size */
   --font-sm: 0.8685714286rem;
   /* font-family: ; */
-  --font-main: "DINNextLTArabic";
+  --font-main: "Montserrat", "DINNextLTArabic", sans-serif;
+  --font-heading: "Playfair Display", "DINNextLTArabic", serif;
 
   /* plugins */
   --mm-ocd-width: calc(100% - 51px);
