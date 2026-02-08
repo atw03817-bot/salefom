@@ -183,23 +183,43 @@
   }
 
   .mm-spn.mm-spn--light {
-    color: #000;
-    background: #ffffff;
+    color: #2d2d2d;
+    background: #faf8f5;
   }
 
   .mm-spn {
     ul.main-menu li:before{
-      @apply w-2 h-2; 
+      width: 8px;
+      height: 8px;
+      border-color: #8b7355;
+      opacity: 0.6;
     }
 
     &.mm-spn--navbar{
+      background: #ffffff;
+      border-bottom: 1px solid #e8e3db;
+      
+      &:before {
+        border-color: #8b7355;
+        opacity: 0.8;
+      }
+      
       &:after {
-        @apply transition-all duration-300 rtl:pr-12 ltr:pl-12 text-start opacity-90 font-bold;
+        transition: all 0.3s ease;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        text-align: start;
+        opacity: 0.95;
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: #2d2d2d;
+        letter-spacing: 0.02em;
       }
 
       &.mm-spn--main{
         &:after{
-          @apply rtl:pr-3 ltr:pl-3;
+          padding-right: 0.75rem;
+          padding-left: 0.75rem;
         }
       }
     }
@@ -213,15 +233,38 @@
     }
 
     li {
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: #ffffff;
+      }
+      
       a,
       > span {
-		padding: 18px;
-		@apply flex items-center gap-4;
-	  }
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 500;
+        color: #2d2d2d;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          color: #8b7355;
+          padding-right: 24px;
+          padding-left: 24px;
+        }
+      }
 
-	  img{
-		@apply w-12 h-12 object-cover bg-[#f5f7f9] pointer-events-none;
-	  }
+      img{
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        background: #ffffff;
+        pointer-events: none;
+        border-radius: 8px;
+        border: 1px solid #e8e3db;
+      }
 
       a span{
         padding: 0;
@@ -244,7 +287,8 @@
 
       &:after {
         width: 100%;
-        border-color: var(--infinte-color);
+        border-color: #e8e3db;
+        opacity: 0.5;
       }
     }
   }
