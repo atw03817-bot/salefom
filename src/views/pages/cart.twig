@@ -49,11 +49,15 @@
 
 {% extends "layouts.master" %}
 {% block content %}
-    <div class="container">
-        {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
-        <nav class="breadcrumbs w-full py-5">
-            <salla-breadcrumb></salla-breadcrumb>
+    <section class="bg-[color:var(--bg-ivory)] mb-6 sm:mb-10">
+      <div class="container py-8 sm:py-12">
+        <nav class="breadcrumbs mb-2">
+          <salla-breadcrumb></salla-breadcrumb>
         </nav>
+        <h1 class="text-2xl sm:text-3xl font-bold">{{ trans('blocks.header.cart') }}</h1>
+      </div>
+    </section>
+    <div class="container">
         <h1 class="sr-only">{{ trans('blocks.header.cart') }}</h1>
         <salla-conditional-offer></salla-conditional-offer>
         <div class="pt-5 flex flex-col items-start lg:flex-row pb-6 lg:pb-20">

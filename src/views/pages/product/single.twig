@@ -83,11 +83,27 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
+    {% set hero_image = product.image.url %}
+    <section class="relative mb-8 sm:mb-14">
+      <div class="absolute inset-0">
+        <img src="{{ hero_image }}" alt="{{ product.name }}" class="w-full h-56 sm:h-80 object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-black/15"></div>
+      </div>
+      <div class="container relative z-10 h-56 sm:h-80 flex items-end">
+        <div class="pb-6 sm:pb-10">
+          <nav class="breadcrumbs mb-2">
+            <salla-breadcrumb></salla-breadcrumb>
+          </nav>
+          <h1 class="text-white text-2xl sm:text-3xl font-bold mb-1">{{ product.name }}</h1>
+          {% if product.subtitle %}
+            <h2 class="text-white/85 text-sm sm:text-base">{{ product.subtitle }}</h2>
+          {% endif %}
+        </div>
+      </div>
+    </section>
     <div class="container">
         {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
-        <nav class="breadcrumbs w-full py-5">
-            <salla-breadcrumb></salla-breadcrumb>
-        </nav>
+        
         <div class="flex flex-col items-start md:flex-row" id="product-{{ product.id }}">
             <div class="sidebar md:sticky top-24 w-full md:!w-2/4 rtl:ml-8 ltr:mr-8 pb-8 md:pb-16 overflow-hidden shrink-0">
                 {% set has_many_images = product.images|length > 1 %}
