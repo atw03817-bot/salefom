@@ -6,22 +6,22 @@ $main-text-color: var(--main-text-color);
 
 :root {
   --infinte-color: #c9c9c9;
-  --main-text-color: #231f1e;
-  --main-text-color-dark: #2b2d34;
+  --main-text-color: #2d2d2d;
+  --main-text-color-dark: #1f1f1f;
 
-  /* current */
-  --color-primary: #5cd5c4;
-  --color-primary: #414042;
-  --color-primary-d: #272628;
-  --color-primary-l: #676668;
-  --color-primary-reverse: #ff6767;
-  --color-text: #7c8082;
-  --bg-gray: #c6c7ce1a;
-  --color-grey: #f5f7f9;
-  --color-light-grey: #eeeeee;
-  /* font-size */
+  /* Perfume Store Palette */
+  --color-primary: #8b7355;
+  --color-primary-d: #6d5a43;
+  --color-primary-l: #b49b7a;
+  --color-primary-reverse: #ffffff;
+  --color-text: #6f6f6f;
+  --bg-ivory: #faf8f5;
+  --bg-gray: #f0efeb;
+  --color-grey: #f7f7f7;
+  --color-light-grey: #ececec;
+
+  /* Typography */
   --font-sm: 0.8685714286rem;
-  /* font-family: ; */
   --font-main: "Montserrat", "DINNextLTArabic", sans-serif;
   --font-heading: "Playfair Display", "DINNextLTArabic", serif;
 

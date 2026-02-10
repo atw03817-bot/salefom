@@ -353,12 +353,13 @@
 }
 
 .s-product-card-promotion-title{
-  @apply bg-red-800 text-white;
+  background: var(--color-primary) !important;
+  color: #ffffff !important;
 }
 
 .s-product-card-sale-price {
   h4{
-    @apply text-red-800 #{!important};
+    color: var(--color-primary) !important;
   }
 
   span{
@@ -432,13 +433,13 @@ salla-quantity-input[max='1']{
   border-radius: 20px !important;
   overflow: hidden !important;
   background: #ffffff !important;
-  border: 1.5px solid #f0ebe5 !important;
+  border: 1.5px solid var(--color-light-grey) !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
   
   &:hover {
     box-shadow: 0 16px 48px rgba(139,115,85,0.15) !important;
     transform: translateY(-8px) !important;
-    border-color: #e8e3db !important;
+    border-color: var(--color-light-grey) !important;
   }
 }
 
@@ -448,7 +449,7 @@ salla-quantity-input[max='1']{
   position: relative !important;
   overflow: hidden !important;
   border-radius: 20px 20px 0 0 !important;
-  background: #faf8f5 !important;
+  background: var(--bg-ivory) !important;
   aspect-ratio: 1 / 1.2 !important;
   
   img {
@@ -475,7 +476,7 @@ salla-quantity-input[max='1']{
   font-family: var(--font-heading) !important;
   font-size: 1.0625rem !important;
   font-weight: 600 !important;
-  color: #2d2d2d !important;
+  color: var(--main-text-color) !important;
   margin-bottom: 0.625rem !important;
   line-height: 1.5 !important;
   transition: color 0.3s ease !important;
@@ -485,7 +486,7 @@ salla-quantity-input[max='1']{
   overflow: hidden !important;
   
   &:hover {
-    color: #8b7355 !important;
+    color: var(--color-primary) !important;
   }
 }
 
@@ -493,7 +494,7 @@ salla-quantity-input[max='1']{
 .s-product-card-subtitle,
 .s-product-card-content-sub {
   font-size: 0.875rem !important;
-  color: #8b7355 !important;
+  color: var(--color-primary) !important;
   margin-bottom: 0.875rem !important;
   font-weight: 500 !important;
   letter-spacing: 0.02em !important;
@@ -515,7 +516,7 @@ salla-quantity-input[max='1']{
   font-family: var(--font-heading) !important;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
-  color: #2d2d2d !important;
+  color: var(--main-text-color) !important;
   margin: 0 !important;
 }
 
@@ -523,7 +524,7 @@ salla-quantity-input[max='1']{
 .s-product-card-price .old-price,
 .s-product-card-price s {
   font-size: 1.0625rem !important;
-  color: #999 !important;
+  color: var(--color-text) !important;
   text-decoration: line-through !important;
   font-weight: 500 !important;
 }
@@ -540,7 +541,7 @@ salla-button.s-product-card-wishlist-btn {
   border-radius: 50% !important;
   background: rgba(255,255,255,0.95) !important;
   backdrop-filter: blur(12px) !important;
-  border: 1.5px solid #e8e3db !important;
+  border: 1.5px solid var(--color-light-grey) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -555,15 +556,15 @@ salla-button.s-product-card-wishlist-btn {
   }
   
   &:hover {
-    background: #8b7355 !important;
-    border-color: #8b7355 !important;
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
     transform: scale(1.15) rotate(10deg) !important;
     box-shadow: 0 6px 20px rgba(139,115,85,0.3) !important;
   }
   
   i, .sicon {
     font-size: 1.25rem !important;
-    color: #2d2d2d !important;
+    color: var(--main-text-color) !important;
     transition: color 0.3s ease !important;
   }
   
@@ -579,7 +580,7 @@ salla-button.s-product-card-wishlist-btn {
   position: absolute !important;
   top: 16px !important;
   right: 16px !important;
-  background: linear-gradient(135deg, #8b7355 0%, #6d5a43 100%) !important;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-d) 100%) !important;
   color: #ffffff !important;
   padding: 8px 16px !important;
   border-radius: 24px !important;
@@ -603,7 +604,7 @@ salla-add-product-button {
   
   button, .s-button-btn {
     width: 100% !important;
-    background: #8b7355 !important;
+    background: var(--color-primary) !important;
     color: #ffffff !important;
     border: none !important;
     padding: 16px 24px !important;
@@ -615,7 +616,7 @@ salla-add-product-button {
     box-shadow: 0 4px 12px rgba(139,115,85,0.2) !important;
     
     &:hover {
-      background: #6d5a43 !important;
+      background: var(--color-primary-d) !important;
       transform: translateY(-3px) !important;
       box-shadow: 0 8px 24px rgba(139,115,85,0.35) !important;
     }
@@ -641,7 +642,7 @@ salla-add-product-button {
   
   span, .count {
     font-size: 0.875rem !important;
-    color: #8b7355 !important;
+    color: var(--color-primary) !important;
     margin-left: 0.625rem !important;
     font-weight: 500 !important;
   }
@@ -660,7 +661,7 @@ salla-add-product-button {
   border-radius: 20px !important;
   
   span {
-    background: #2d2d2d !important;
+    background: var(--main-text-color) !important;
     color: #ffffff !important;
     padding: 14px 28px !important;
     border-radius: 12px !important;
@@ -672,7 +673,7 @@ salla-add-product-button {
 
 /* Promotion Badge */
 .s-product-card-promotion-title {
-  background: linear-gradient(135deg, #8b7355 0%, #6d5a43 100%) !important;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-d) 100%) !important;
   color: #ffffff !important;
   padding: 6px 14px !important;
   border-radius: 8px !important;
@@ -698,7 +699,7 @@ salla-add-product-button {
 
 /* Product images - all variations */
 [class*="s-product-card"] [class*="image"] {
-  background: #faf8f5 !important;
+  background: var(--bg-ivory) !important;
   border-radius: 20px 20px 0 0 !important;
   
   img {
@@ -722,5 +723,5 @@ salla-add-product-button {
 [class*="price"] h4,
 [class*="price"] .price-value {
   font-family: var(--font-heading) !important;
-  color: #2d2d2d !important;
+  color: var(--main-text-color) !important;
 }
