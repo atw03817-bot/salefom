@@ -35,10 +35,7 @@
               </button>
           {% endif %}
 
-          {# Search bar #}
-          <div class="header-search flex-1">
-            <salla-search inline oval height="36"></salla-search>
-          </div>
+          
       </div>
 
       <salla-contacts is-header></salla-contacts>
@@ -65,6 +62,9 @@
                       <custom-main-menu></custom-main-menu>
                   </div>
                   <div class="flex items-center justify-end my-2.5">
+                      <div class="header-search hidden lg:block w-72 rtl:ml-3 ltr:mr-3">
+                        <salla-search inline oval height="40"></salla-search>
+                      </div>
                       {% if user.type=='user' %}
                         <salla-user-menu avatar-only show-header></salla-user-menu>
                       {% else %}
